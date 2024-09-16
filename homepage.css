@@ -1,0 +1,813 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+@import url(https://db.onlinewebfonts.com/c/060e116a70e3096c52db16f61aaab194?family=Sofia+Pro+Regular);
+
+@font-face {
+    font-family: "Sofia Pro Regular";
+    src: url("https://db.onlinewebfonts.com/t/060e116a70e3096c52db16f61aaab194.eot");
+    src: url("https://db.onlinewebfonts.com/t/060e116a70e3096c52db16f61aaab194.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/060e116a70e3096c52db16f61aaab194.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/060e116a70e3096c52db16f61aaab194.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/060e116a70e3096c52db16f61aaab194.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/060e116a70e3096c52db16f61aaab194.svg#Sofia Pro Regular")format("svg");
+}
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(-100%); /* Mulai dari kiri */
+    }
+    100% {
+        transform: translateX(100%); /* Berakhir di kanan */
+    }
+}
+
+.countainer1{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
+.navbar{
+    width: 100vw;
+    height: 15vh;
+    box-shadow: 0px 0px 3px black;
+    background-color: white;
+    z-index: 999;
+    position: fixed;
+}
+.navbar-area{
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 15vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.logo h2{
+    color: rgba(0, 0, 0, 0.411);
+}
+.logo img{
+    width: 7vw;
+    height: 7vh;
+    margin-right: 35px;
+}
+.menus{
+    width: 50vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    font-family: "Poppins";
+    text-shadow: 0.1px 0.1px 0.1px black;
+}
+.menus ul{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+.menus li a{
+    margin: 25px;
+    text-decoration: none;
+    color: black;
+}
+.beranda{
+    width: 8vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+.layanan{
+    width: 8vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.informasi{
+    width: 11vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.kontak{
+    width: 8vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search{
+    width: 25vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kotak{
+    width: 22vw;
+    height: 5vh;
+    border: 1px solid rgba(0, 0, 0, 0.411);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kotak img{
+    width: 1.5vw;
+    height: 2vh;
+}
+.kotak p{
+    font-family: "Poppins";
+    color: rgba(0, 0, 0, 0.411);
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+.profile{
+    width: 10vw;
+    height: 15vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.profile img{
+    width:3.5vw;
+    height: 6vh;
+    border-radius: 1000px;
+    border: 1px solid rgba(0, 0, 0, 0.411);
+    margin-left: 10px;
+}
+.home-area{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: "Sofia Pro Regular";
+}
+.area-text{
+    width: 65vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.area-image{
+    width: 35vw;
+    height: 100vh;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.area-dokter{
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.area-dokter img{
+    width: 35vw;
+    z-index: 500;
+    transform: scaleX(-1);
+    margin-top: 130.2px;
+    image-rendering: optimizeQuality;
+    margin-right: 350px;
+    overflow-x: hidden;
+}
+.background img{
+    width: 100vw;
+    height: 100vh;
+    image-rendering: optimizeQuality;
+}
+.image-image{
+    position: absolute;
+    height: 23vh;
+    top: 170px;
+    left: 845px;
+}
+.image-image img{
+    z-index: 900;
+    width: 12vw;
+    height: 18vh;
+    border: 2px solid #497035;
+    border-radius: 20px;
+}
+.image-image-1{
+    position: absolute;
+    top: 420px;
+    left: 870px;
+    z-index: 800;
+}
+.image-image-1 img{
+    width: 5.2vw;
+    height: 9vh;
+    border: 2px solid #497035;
+    border-radius: 1000px;
+}
+.image-image-2{
+    position: absolute;
+    z-index: 800;
+    top: 625px;
+    right: 500px;
+}
+.image-image-2 img{
+    width: 13vw;
+    height: 9vh;
+    border: 2px solid #497035;
+    border-radius: 20px;
+}
+.image-image-3{
+    position: absolute;
+    z-index: 800;
+    top: 250px;
+    right: 150px;
+}
+.image-image-3 img{
+    width: 5.8vw;
+    height: 10vh;
+    border: solid #497035 2px;
+    border-radius: 1000px;
+}
+.image-image-4{
+    position: absolute;
+    top: 410px;
+    left: 1120px;
+}
+.image-image-4 img {
+    width: 21.5vw;
+    height: 12vh;
+    border-radius: 20px;
+    border: solid #497035 2px;
+}
+.image-image-5{
+    position: absolute;
+    top: 710px;
+    right: 180px;
+}
+.image-image-5 img{
+    width: 6vw;
+    height: 10.5vh;
+    border: 2px solid #497035;
+    border-radius: 1000px;
+}
+.background{
+    width: 35vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    width: 40vw;
+    height: 60vh;
+    margin-top: 130px;
+    margin-right: 150px;
+}
+.text-atas{
+    width: 50vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.text-atas h1{
+    font-size: 3.5em;
+    line-height: 60px;    
+    overflow-y: hidden;
+}
+.text-bawah{
+    width: 40vw;
+    height: 20vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.text-bawah h3{
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    font-weight: lighter;
+}
+.button{
+    width: 40vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+}
+.btn{
+    width: 15vw;
+    height: 6vh;
+    background-color: #497035;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn p{
+    font-size: 1.1em;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+.btn p a{
+    text-decoration: none;
+    color: white;
+}
+.countainer2{
+    width: 100vw;
+    height: 20vh;
+}
+.container-logo{
+    background-color: #F5F5F5;
+    height: 125px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-area{
+    animation: moveLeftToRight 10s infinite reverse linear;
+    overflow-y: hidden;
+    display: flex;
+}
+.image{
+    margin-right: 70px ;
+    margin-left: 70px;
+    scale: 1;
+}
+.countainer3{
+    width: 100vw;
+    height: 85vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.area-area{
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+}
+.area-kiri3{
+    width: 65vw;
+    height: 85vh;
+}
+.text-besar3{
+    width: 40vw;
+    height: 25vh;
+    margin-top: 130px;
+    margin-left: 10%;
+    font-family: "Sofia Pro Regular";
+    margin-left: 110px;
+    overflow-y: hidden
+}
+.text-besar3 h1{
+    font-size: 4em;
+    font-weight: 100;
+    line-height: 70px;
+}
+.keteranagan3{
+    width: 40vw;
+    height: 20vh;
+    margin-left: 10%;
+    font-family: "Sofia Pro Regular";
+    margin-top: 60px;
+    margin-left: 115px;
+}
+.keteranagan3 h3{
+    line-height: 35px;
+    font-weight: 100;
+}
+.area-kanan3{
+    width: 35vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kotak-area{
+    width: 35vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    margin-right: 50px;
+}
+.kotak-pertama{
+    width: 30vw;
+    height: 10vh;
+    border: 2px solid #B4B4B4;
+    margin: 7px;
+    border-radius: 55px;
+    display: flex;
+    align-items: center;
+    font-family: "Poppins";
+}
+.kotak-pertama img {
+    width: 3vw;
+    height: 5vh;
+    margin-right: 30px;
+    margin-left: 40px;
+}
+.kotak-pertama h2{
+    font-size: 1.2em;
+}
+.container-layanan2{
+    width: 100vw;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.card-area1{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.card-area2{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+}
+.card{
+    width: 365px;
+    height: 285px;
+    background: #EFF3ED;
+    border-radius: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    border: 2px solid #497035;
+}
+.title-card{
+    font-family: 'Sofia Pro Regular';
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 35px;
+}
+.photo-title{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    overflow-y: hidden;
+}
+.prf{
+    width: 55px;
+    height: 55px;
+    margin-right: 20px;
+    margin-top: 25px;
+    margin-left: 40px;
+}
+.desk-card{
+    font-size: 15px;
+    font-weight: lighter;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 10px;
+    font-family: 'Sofia Pro Regular';
+    text-align: justify;
+}
+.button-card{
+    margin-left: 35px;
+    margin-top: 40px;
+    height: 40px;
+    width: 180px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Sofia Pro Regular';
+    font-size: 18px;
+    background: #ffffff;
+}
+.countainer-artikel{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+}
+.text-atas1{
+    width: 100vw;
+    height: 7vh;
+    font-family: "Sofia Pro Regular";
+    display: flex;
+    align-items: center;
+    margin-top: 128px;
+}
+.text-atas1 p{
+    font-size: 1.3em;
+    margin-left: 110px;
+}
+.text-judul1{
+    width: 100vw;
+    height: 12vh;
+    align-items: flex-start;
+    display: flex;
+    font-family: "Sofia Pro Regular";
+}
+.text-judul1 h1{
+    font-size: 2.5em;
+    margin-left: 110px;
+}
+.area-berita{
+    width: 100vw;
+    height: 66vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+.berita1{
+    width: 23vw;
+    height: 50vh;
+    background-color: white;
+    border-radius: 20px;
+    border: 3px solid black;
+    font-family: "Sofia Pro Regular";
+    margin: 54px;
+    margin-bottom: 100px;
+}
+.berita1 img{
+    width: 23vw;
+    height: 30vh;
+}
+.berita1 p{
+    font-size: 1.2em;
+    margin: 10px 15px;
+    font-weight: bolder;
+}
+.kotakk{
+    width: 9vw;
+    height: 5vh;
+    background-color: #EFF3ED;
+    margin: 27px 15px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.kotakk p{
+    font-size: 1em;
+    color: #497035;
+}
+.bawahan{
+    width: 23vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    overflow-y: hidden;
+}
+.bawahan p{
+    font-size: 0.95em;
+}
+.ceritanyaa p{
+    margin-left: 50px;
+    color: #5F5F5F;
+}
+.countainer-kami{
+    width: 100vw;
+    height: 70vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-besar{
+    width: 80vw;
+    height: 55vh;
+    overflow-y: hidden;
+}
+.judul-kami{
+    width: 80vw;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-family: "Sofia Pro Regular";
+}
+.judul-kami h1{
+    font-size: 2.6em;
+}
+.simbol{
+    width: 80vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.simbol img{
+    width: 4vw;
+    height: 3vh;
+}
+.dekss{
+    width: 80vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Sofia Pro Regular";
+}
+.dekss p{
+    font-size: 1.1em;
+    font-weight: lighter;
+    color: #5B5B5B;
+}
+.countainer-booking{
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.booking-kiri{
+    width: 55vw;
+    height: 85vh;
+}
+.formnya{
+    width: 50vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+}
+.form-kiri{
+    width: 25vw;
+    height: 40vh;
+}
+form select{
+    width: 22.3vw;
+    height: 7vh;
+    margin-left: 19px;
+    border-radius: 5px;
+    border: 1px solid #A9A9A9;
+    font-family: "Poppins";
+    margin-top: 10px;
+}
+form input{
+    width: 20vw;
+    height: 3vh;
+    border-radius: 5px;
+    font-family: "Poppins";
+    padding: 15px;
+    margin: 13px;
+    margin-left: 19px;
+}
+.form-kanan{
+    width: 25vw;
+    height: 40vh;
+}
+.form-besar{
+    width: 50vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    margin-left: 40px;
+}
+.booking-kanan{
+    width: 45vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.booking-kanan img{
+    width: 85%;
+    margin-top: 25%;
+}
+form{
+    margin-top: 55px;
+}
+form textarea{
+    resize: none;
+    width: 45vw;
+    height: 21vh;
+    margin-bottom: 87px;
+    font-family: "Poppins";
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #A9A9A9;
+}
+.button-bawah{
+    width: 55vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-bawah a{
+    padding: 20px;
+    background-color: #497035;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: "Sofia Pro Regular";
+    margin-right: 120px;
+    margin-bottom: 40px;
+}
+.button-bawah p{
+    margin-bottom: 40px;
+    font-family: "Sofia Pro Regular";
+    color: #A9A9A9;
+}
+.pilihan{
+    margin-top: 13px;
+    padding: 9px;
+}
+.footer2{
+    width: 100vw;
+    height: 400px;
+    background: #EFF3ED;
+    display: flex;
+}
+.footer-text{
+    width: 25%;
+    background: #EFF3ED;
+    display: flex;
+    flex-direction: column;
+}
+.footer-text p {
+    font-size: 45px;
+    font-family: 'Sofia Pro Regular';
+    font-weight: 600;
+    margin-left: 20%;
+    margin-top: 18%;
+}
+.footer-menu {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #EFF3ED;
+    font-family: 'Sofia Pro Regular';
+    margin-left: 130px ;
+}
+.menu-section {
+    flex: 1;
+    margin-left: 1px;
+}
+.menu-section h3 {
+    color: #000000;
+    font-size: 27px;
+    font-weight: 600;
+    margin-top: 45%;
+}
+.menu-section ul {
+    list-style: none;
+    margin-top: 50px;
+    margin-left: -10px;
+}
+.menu-section ul li {
+    margin: 8px 10px;
+    font-size: 20px;
+}
+.menu-section ul li a {
+    color: #959595;
+    text-decoration: none;
+}
+.menu-section ul li a:hover {
+    text-decoration: underline;
+}
+.footer-text{
+    width: 30%;
+}
+.sosmed{
+    justify-content: start;
+    align-items: start;
+    display: flex;
+    overflow-y: hidden;
+    margin-left: 19%;
+    margin-top: 25px;
+}
+.sosmed-item{
+    margin: -22px;
+}
+.item-sosmed{
+    scale: 0.4;
+    margin-top: 3px;
+}
+.donlod{
+    width: 32vw;
+    height: 4.5vh;
+}
